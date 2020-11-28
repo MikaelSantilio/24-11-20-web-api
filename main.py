@@ -68,17 +68,21 @@ class QuickchartAPI(object):
 
 if __name__ == "__main__":
 
+    print("# GeolocationAPI")
     geolocation_api = GeolocationAPI()
-    # all_fields = geolocation_api.get_ip_location(ip="24.48.0.1")
-    # spec_fields = geolocation_api.get_ip_location(ip="24.48.0.1", fields=["status","message","query","country","city"])
+    all_fields = geolocation_api.get_ip_location(ip="24.48.0.1")
+    spec_fields = geolocation_api.get_ip_location(ip="24.48.0.1", fields=["status","message","query","country","city"])
 
-    # print(all_fields)
-    # print(spec_fields)
+    print(all_fields)
+    print(spec_fields)
 
+    print("\n# DiversityAPI")
     diversity_api = DiversityAPI()
-    # info_person = diversity_api.get_info_person(fullname="camila alejandra cortez")
+    info_person = diversity_api.get_info_person(fullname="camila alejandra cortez")
 
-    # print(info_person)
+    print(info_person)
+
+    print("\n# QuickchartAPI")
 
     quick_chart_api = QuickchartAPI()
     chart = quick_chart_api.post_chart(
